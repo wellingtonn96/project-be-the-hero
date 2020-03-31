@@ -16,6 +16,10 @@ module.exports = {
 				allowNull: false,
 				unique: true,
 			},
+			password_hash: {
+				type: Sequelize.STRING,
+				allowNull: false,
+			},
 			whatsapp: {
 				type: Sequelize.STRING,
 				allowNull: false,

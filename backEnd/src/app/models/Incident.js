@@ -14,6 +14,12 @@ class Incident extends Model {
 				tableName: 'incidents',
 			}
 		);
+
+		return this;
+	}
+
+	static associate(models) {
+		this.belongsTo(models.Ong, { foreignKey: 'ong_id', as: 'ongs' });
 	}
 }
 

@@ -6,6 +6,7 @@ class OngController {
 		const schema = Yup.object().shape({
 			name: Yup.string().required(),
 			email: Yup.string().email().required(),
+			name: Yup.string().required(),
 			whatsapp: Yup.string().required(),
 			city: Yup.string().required(),
 			uf: Yup.string().min(2).required(),

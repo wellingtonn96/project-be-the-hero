@@ -19,6 +19,12 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "prettier/prettier": "error"
-  }
+		'prettier/prettier': 'error',
+    'import/prefer-default-export': 'off',
+    'camelcase': 'off',
+    'no-param-reassign': 'off'
+	},
+	env: {
+		jest: true
+	}
 };

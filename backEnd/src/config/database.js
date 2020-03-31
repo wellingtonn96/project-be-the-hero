@@ -6,6 +6,7 @@ module.exports = {
 	username: process.env.APP_USERNAME,
 	password: process.env.APP_PASSWORD,
 	database: process.env.APP_DATABASE,
+	logging: false,
 	define: {
 		timestamps: true,
 		underscored: true,
