@@ -1,0 +1,50 @@
+.logon-container {
+	width: 100%;
+	max-width: 1120px;
+	height: 100vh;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login {
+	background-color: #ffffff;
+	border-radius: 8px;
+	margin-top: 50px;
+	padding: 40px 25px 25px 25px;
+	box-shadow: 5px 10px 18px #888888;
+}
+
+.logon-container section.form {
+	width: 100%;
+	max-width: 350px;
+	margin-right: 30px;
+}
+
+.logon-container section.form form h1 {
+	color: #666666;
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.logon-container section.form a {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	color: #41414d;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: opacity 0.2s;
+}
+
+.logon-container section.form form a svg {
+	margin-right: 8px;
+}
+
+.logon-container section.form form a svg {
+	opacity: 0.8;
+}
