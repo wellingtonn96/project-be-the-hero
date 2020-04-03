@@ -13,7 +13,7 @@ export default function Profile() {
 				<img src={logoImg} alt="logo" />
 				<span>Bem vida, APAD</span>
 
-				<Link className="button" to="/icidents/new">
+				<Link className="button" to="/incidents/new">
 					Cadastrar novo caso
 				</Link>
 				<button type="button">
@@ -24,20 +24,6 @@ export default function Profile() {
 			<h1>Casos cadastrados</h1>
 
 			<ul>
-				<li>
-					<strong>CASO:</strong>
-					<p>Caso teste</p>
-
-					<strong>DESCRIÇÃO</strong>
-					<p>Descrição test</p>
-
-					<strong>VALOR:</strong>
-					<p>R$ 120,00</p>
-
-					<button type="button">
-						<FiTrash2 size={20} color="#a8a8b3" />
-					</button>
-				</li>
 				<li>
 					<strong>CASO:</strong>
 					<p>Caso teste</p>

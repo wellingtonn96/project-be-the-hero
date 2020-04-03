@@ -23,9 +23,10 @@ export default function Register() {
 					</p>
 				</section>
 				<form action="">
-					<input placeholder="Nome da ONG" />
+					<input type="text" placeholder="Nome da ONG" />
 					<input type="email" placeholder="E-mail" />
-					<input placeholder="Whatsapp" />
+					<input type="password" placeholder="senha" />
+					<input type="text" placeholder="Whatsapp" />
 
 					<div className="input-group">
 						<input placeholder="Cidade" />
