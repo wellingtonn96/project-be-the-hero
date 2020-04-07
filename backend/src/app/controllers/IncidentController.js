@@ -7,8 +7,11 @@ class IncidentController {
 		const { page = 1 } = req.query;
 		const offset = (page - 1) * 5;
 		const limit = 5;
-
+		const ong_id = req.ongId;
 		const incident = await Incident.findAndCountAll({
+			where: {
+				ong_id,
+			},
 			include: {
 				association: 'ongs',
 				attributes: ['name', 'email', 'whatsapp', 'city', 'uf'],
@@ -24,7 +27,10 @@ class IncidentController {
 
 	static async store(req, res) {
 		const { title, description, value } = req.body;
-		const { id } = req.params;
+
+		console.log(req.body);
+
+		const id = req.ongId;
 
 		const ong = await Ong.findOne({ where: { id } });
 

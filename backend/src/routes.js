@@ -15,9 +15,8 @@ route.post('/ongs', OngController.store);
 route.use(authMiddleware);
 
 route.get('/ongs', OngController.index);
-
 route.get('/incidents', incidentController.index);
-route.post('/incidents/:id', incidentController.store);
+route.post('/incidents', incidentController.store);
 route.delete('/incidents/:id', incidentController.delete);
 route.get('/incidents/:id', ProfileController.index);
 

@@ -6,11 +6,19 @@ class OngController {
 		const schema = Yup.object().shape({
 			name: Yup.string().required(),
 			email: Yup.string().email().required(),
-			name: Yup.string().required(),
+			password: Yup.string().required(),
 			whatsapp: Yup.string().required(),
 			city: Yup.string().required(),
 			uf: Yup.string().min(2).required(),
 		});
+
+		const { email } = req.body;
+
+		const ong = await Ong.findOne({ where: { email } });
+
+		if (ong) {
+			return res.status(401).json({ message: 'User already exists' });
+		}
 
 		if (!(await schema.isValid(req.body))) {
 			return res.status(401).json({ message: 'Validation is failed!' });

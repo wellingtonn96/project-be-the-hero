@@ -1,0 +1,55 @@
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media(min-width: 760px) {
+	.container {
+		width: 100%;
+		max-width: 960px;
+		height: 100vh;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+@media(max-width: 760px) {
+	.header-contaier img {
+		height: 50px;
+	}
+}
+
+.login-container {
+	width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.login-container form a {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	color: #41414d;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: opacity 0.2s;
+}
+
+.login-container form a svg {
+	margin-right: 8px;
+}
+
+.login-container form a svg {
+	opacity: 0.8;
+}
+
+@media(max-width: 760px) {
+	.container section img {
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}

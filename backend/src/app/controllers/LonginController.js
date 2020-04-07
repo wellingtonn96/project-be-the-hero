@@ -17,10 +17,11 @@ class LoginController {
 			return res.status(401).json({ message: 'email or password is invalid!' });
 		}
 
-		const { id } = ong;
+		const { id, name } = ong;
 
 		return res.status(200).json({
 			id,
+			name,
 			token: jwt.sign({ id }, authConfig.secret, {
 				expiresIn: authConfig.expiresIn,
 			}),

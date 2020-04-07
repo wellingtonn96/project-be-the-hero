@@ -1,10 +1,10 @@
-.register-container {
+.incident-container {
 	width: 100%;
 	padding: 20px;
 }
 
 @media(min-width: 760px) {
-	.register-container {
+	.incident-container {
 		width: 100%;
 		max-width: 1120px;
 		height: 100vh;
@@ -15,7 +15,7 @@
 		justify-content: space-between;
 	}
 
-	.register-container .content{
+	.incident-container .content{
 		width: 100%;
 		padding: 96px;
 		background: #f0f0f5;
@@ -29,25 +29,25 @@
 
 
 @media(max-width: 760px) {
-	.register-container img {
+	.incident-container img {
 		height: 50px;
 	}
 }
 
 @media(max-width: 760px) {
-	.register-container form {
+	.incident-container form {
 		margin: 20px 0;
 	}
 }
 
-.register-container  p {
+.incident-container p {
 	font-size: 20px;
 	color: #737380;
 	line-height: 25px;
 	margin-bottom: 20px;
 }
 
-.register-container a {
+.incident-container a {
 	margin-top: 20px;
 	color: #41414d;
 	font-size: 18px;
@@ -56,11 +56,11 @@
 	transition: opacity 0.2s;
 }
 
-.register-container  a svg {
+.incident-container  a svg {
 	margin-right: 8px;
 }
 
-.register-container a svg {
+.incident-container a svg {
 	opacity: 0.8;
 }
 

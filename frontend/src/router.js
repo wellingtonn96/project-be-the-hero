@@ -1,20 +1,36 @@
-import React from "react"
+import React from 'react'
 
-import { BrowserRouter, Route, Switch } from "react-router-dom"
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import auth from './auth'
 
-import Logon from "./pages/Logon"
-import Register from "./pages/Register"
-import Profile from "./pages/Profile"
-import NewIncident from "./pages/NewIncidents"
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Incident from './pages/Newincident'
+import Profile from './pages/Profile/index'
+
+const PrivateRoute = ({ component: Component, ...rest }) => {
+	return (
+		<Route
+			{...rest}
+			render={(props) =>
+				auth() ? (
+					<Component {...props} />
+				) : (
+					<Redirect to={{ pathname: '/', state: { from: props.location } }} />
+				)
+			}
+		/>
+	)
+}
 
 export default function Routes() {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route path="/" exact component={Logon} />
-				<Route path="/register" component={Register} />
-				<Route path="/profile" component={Profile} />
-				<Route path="/incidents/new" component={NewIncident} />
+				<Route path="/" exact component={Login} />
+				<Route path="/register" exact component={Register} />
+				<PrivateRoute path="/incident/new" exact component={Incident} />
+				<PrivateRoute path="/profile" exact component={Profile} />
 			</Switch>
 		</BrowserRouter>
 	)
