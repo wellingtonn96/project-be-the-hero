@@ -28,8 +28,6 @@ class IncidentController {
 	static async store(req, res) {
 		const { title, description, value } = req.body;
 
-		console.log(req.body);
-
 		const id = req.ongId;
 
 		const ong = await Ong.findOne({ where: { id } });
