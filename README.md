@@ -8,7 +8,7 @@ Ecoleta
 
 <p align="center">
 Project to assist ONGs that need donations to find people willing to help.
-ONGs in registering their incidents and people can donate any amount to the cause. To this propose we build a mobile and web app, in a Omnistack Week 11</p>
+ONGs will register their incidents and people can donate any amount to the cause. To this propose we build a mobile and web app, in a Omnistack Week 11</p>
 
 
 
@@ -40,8 +40,8 @@ This app features all the latest tools and practices in mobile development!
 ### Getting started with the backend server
 
 1. Move yourself to the backend folder: `cd backend`
-2. Run`knex:migrate` to create the tables <br />
-3  Run`knex:seed` to insert the data into the table
+2. Run`yarn sequelize-cli db:create` to create the database <br />
+3. Run`yarn sequelize-cli db:migrate` to create the tables <br />
 4. Run `yarn dev` to start the server
 
 ### Getting started with the frontend app
@@ -53,8 +53,8 @@ This app features all the latest tools and practices in mobile development!
 ### Getting started with the mobile app
 
 1. Move yourself to the mobile folder: `cd mobile`
-2. Run `expo install` to install the dependencies
-2. Run `expo start` to start the mobile app
+2. Run `yarn install` to install the dependencies
+2. Run `yarn start` to start the mobile app
 
 ## License
 
