@@ -3,7 +3,7 @@
   <img src="./assets/logo.svg" alt="Ecoleta">
 <br>
 <br>
-Ecoleta
+Be The Hero
 </h1>
 
 <p align="center">
