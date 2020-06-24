@@ -48,12 +48,15 @@ export const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   incidentContent: {
-    padding: 5,
     width: '50%',
   },
   incidentProperty: {
     fontWeight: 'bold',
     lineHeight: 25,
+  },
+  incidentValue: {
+    color: '#aaa',
+    fontWeight: 'bold',
   },
   detailsLink: {
     width: '100%',

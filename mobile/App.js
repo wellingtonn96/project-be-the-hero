@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Incidents from './src/pages/Incidents';
+import Routes from './src/routes';
 
 export default function App() {
-  return <Incidents />;
+  return <Routes />;
 }

@@ -1,17 +1,25 @@
-import React, {useState} from 'react';
-import {View, Text, Image, ScrollView, FlatList} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import api from '../../services/api';
 
 import LogoImg from './../../assets/logo.png';
 
 import {styles} from './styles';
 
 export default function Incidents() {
-  const [incidents, setIncidents] = useState([
-    {id: 1, name: 'Elon Musk', caso: 'Tesla', value: 150.2},
-    {id: 2, name: 'Jef Pesus', caso: 'Amazon', value: 150.2},
-    {id: 3, name: 'Bill Gates', caso: 'Microsoft', value: 150.2},
-    {id: 4, name: 'Lerry Page', caso: 'Google', value: 150.2},
-  ]);
+  const [incidents, setIncidents] = useState([[]]);
+
+  const navegation = useNavigation();
+  function navegateToDetail() {
+    navegation.navigate('Detail');
+  }
+
+  async function loadIncidents() {
+    const response = await api.get('/incidents');
+
+    setIncidents(response.data);
+  }
   return (
     <>
       <View style={styles.container}>
@@ -49,9 +57,11 @@ export default function Incidents() {
                 <Text style={styles.incidentValue}>{incident.value}</Text>
               </View>
 
-              <View style={styles.detailsLink}>
+              <TouchableOpacity
+                style={styles.detailsLink}
+                onPress={() => navegateToDetail()}>
                 <Text style={styles.navDethes}>Ver mais detalhes</Text>
-              </View>
+              </TouchableOpacity>
             </View>
           )}
         />
