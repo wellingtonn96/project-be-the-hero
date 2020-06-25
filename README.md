@@ -33,7 +33,7 @@ This app features all the latest tools and practices in mobile development!
 
 ## Getting started
 
-1. Clone this repo using `git clone github.com/wellingtonn96/NextLevelWeek.git`
+1. Clone this repo using `git clone github.com/wellingtonn96/OmnistackWeek11.git`
 2. Move yourself to the appropriate directory: `cd ecoleta`<br />
 3. Run `yarn` to install dependencies
 
