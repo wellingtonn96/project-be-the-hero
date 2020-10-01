@@ -12,7 +12,7 @@ ONGs will register their incidents and people can donate any amount to the cause
 
 
 
-<div>
+<div align="center">
   <img src="./assets/web.jpg"alt="demo-web" height="425" width="700">
   <img src="./assets/mobile1.jpg" alt="demo-mobile" height="425">
   <img src="./assets/mobile2.jpg" alt="demo-mobile" height="425">
