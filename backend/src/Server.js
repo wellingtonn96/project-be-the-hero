@@ -15,7 +15,7 @@ class Server {
 	}
 
 	upServer() {
-		return this.server.listen(3333);
+		return this.server.listen(process.env.PORT || 3333);
 	}
 
 	middlewares() {
