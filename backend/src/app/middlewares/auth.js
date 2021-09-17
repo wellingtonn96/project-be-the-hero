@@ -16,7 +16,7 @@ export default async (req, res, next) => {
 
 		req.ongId = decoded.id;
 
-		return next();
+		return next(new NotAuthorizedError());
 	} catch (error) {
 		return res.status(401).json({ error: 'Token Invalid!' });
 	}
