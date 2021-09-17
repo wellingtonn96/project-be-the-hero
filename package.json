@@ -1,0 +1,13 @@
+{
+  "name": "project-be-the-hero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wellingtonn96/project-be-the-hero.git",
+  "author": "Wellington Santos <weltossousa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm install --prefix backend",
+    "build": "npm --prefix backend run build",
+    "start": "npm --prefix backend run start"
+  }
+}

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/Server.js",
     "dev": "nodemon src/Server.js",
     "build": "sucrase ./src -d ./dist --transforms imports",
     "test": "jest"
