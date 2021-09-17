@@ -19,7 +19,13 @@ class Server {
 	}
 
 	middlewares() {
-		this.server.use(cors({ origin: "*" }));
+		// cors origin URL - Allow inbound traffic from origin
+		corsOptions = {
+			origin: ["160.20.183.112"],
+			optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+		};
+
+		this.server.app.use(cors(corsOptions));
 		this.server.use(json());
 	}
 
